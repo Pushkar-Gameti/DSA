@@ -20,7 +20,7 @@ typedef struct linkednode {
 node *temp, *start, *last;
 int count = 0;
 
-// Function prototypes
+// Function prototype
 void createNode();
 void insertFirst();
 void insertMid();
