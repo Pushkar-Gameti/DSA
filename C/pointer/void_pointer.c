@@ -1,27 +1,24 @@
-/*
-    Program: Using Void Pointers in C
-    Question: Demonstrates how to assign and dereference different types (int, float) using a void pointer.
-    Improvements:
-    - Corrects the use of format specifiers for pointer and data type printing.
-    - Provides clearer output formatting.
-*/
+// This program demonstrates how to use a void pointer to store and access 
+// the address and values of both int and float variables using typecasting.
 
 #include <stdio.h>
 
 int main() {
-    void *p;
-    int a = 10;
-    float b = 10.1f;
+    void *p;            // Declare a void pointer
+    int a = 10;         // Integer variable
+    float b = 10.1f;    // Float variable
 
-    // Point to integer and print
+    // Pointing to integer and displaying value
     p = &a;
-    printf("Address of a is: %p\n", (void *)p);        
-    printf("Value of a is: %d\n", *(int *)p);          
+    printf("\n[Integer Section]");
+    printf("\nAddress of 'a' is: %p", (void *)p);
+    printf("\nValue of 'a' is: %d", *(int *)p);
 
-    // Point to float and print
+    // Pointing to float and displaying value
     p = &b;
-    printf("Address of b is: %p\n", (void *)p);        
-    printf("Value of b is: %.2f\n", *(float *)p);      
+    printf("\n\n[Float Section]");
+    printf("\nAddress of 'b' is: %p", (void *)p);
+    printf("\nValue of 'b' is: %.2f\n", *(float *)p);
 
     return 0;
 }
